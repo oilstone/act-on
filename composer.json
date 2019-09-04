@@ -1,0 +1,31 @@
+{
+    "name": "oilstone/act-on",
+    "description": "PHP integration library for Act On",
+    "keywords": [
+        "Act On"
+    ],
+    "homepage": "https://github.com/oilstone/act-on",
+    "authors": [
+        {
+            "name": "Online Solutions",
+            "email": "support@onlinesolutionsltd.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "illuminate/support": "^5.8",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Oilstone\\ActOn\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oilstone\\ActOn\\Integrations\\Laravel\\ServiceProvider"
+            ]
+        }
+    }
+}
