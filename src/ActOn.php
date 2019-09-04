@@ -105,4 +105,15 @@ class ActOn
     {
         return $this->config['url'];
     }
+
+    /**
+     * @param array $mappings
+     * @return ActOn
+     */
+    public function setMappings(array $mappings): ActOn
+    {
+        $this->mappings = $mappings;
+
+        return $this;
+    }
 }
