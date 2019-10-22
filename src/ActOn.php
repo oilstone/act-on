@@ -38,7 +38,11 @@ class ActOn
     {
         $this->config = $config;
 
-        $this->client = new Client();
+        $this->client = new Client([
+            'curl' => [
+                CURLOPT_SSLVERSION => CURL_SSLVERSION_TLSv1_2
+            ]
+        ]);
 
         $this->mappings = array_merge($this->mappings, $mappings);
     }
